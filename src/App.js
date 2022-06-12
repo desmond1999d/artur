@@ -7,6 +7,7 @@ function App() {
       <header className="App-header">
         <p>
      добро пожаловать  сайт Артура
+		</p>
       </header>
     </div>
   );
