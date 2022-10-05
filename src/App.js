@@ -1,13 +1,15 @@
-from http.server import BaseHTTPRequestHandler, HTTPServer
-
-class handler(BaseHTTPRequestHandler):
-    def do_GET(self):
-        self.send_response(200)
-        self.send_header('Content-type','text/html')
-        self.end_headers()
-
-        message = "<meta charset=utf-8><div style=\"color green; font-size:10rem; display:block; max-width: 100%\">Артурчик - маленький пупсик!</div>"
-        self.wfile.write(bytes(message, "utf8"))
-
-with HTTPServer(('', 8000), handler) as server:
-    server.serve_forever()
+a = 0
+b = 0
+op = 0
+while True:
+    print('input a:')
+    a = input()
+    print('input b:')
+    b = input()
+    print('input operation: ')
+    op = input()
+    print('result: ')
+    if op == '-':
+        print(int(a) - int(b))
+    elif op == '+':
+        print((int(a) + int(b)))
